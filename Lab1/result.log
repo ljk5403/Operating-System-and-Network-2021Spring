@@ -1,0 +1,828 @@
+Random create 10 processes
+Process ID:1	Arrival Time:4	Used Time/Estimated RunTime:0/3	Priority:6	Status:0
+Process ID:2	Arrival Time:0	Used Time/Estimated RunTime:0/1	Priority:3	Status:0
+Process ID:3	Arrival Time:5	Used Time/Estimated RunTime:0/9	Priority:3	Status:0
+Process ID:4	Arrival Time:0	Used Time/Estimated RunTime:0/8	Priority:1	Status:0
+Process ID:5	Arrival Time:4	Used Time/Estimated RunTime:0/2	Priority:3	Status:0
+Process ID:6	Arrival Time:6	Used Time/Estimated RunTime:0/2	Priority:4	Status:0
+Process ID:7	Arrival Time:7	Used Time/Estimated RunTime:0/5	Priority:9	Status:0
+Process ID:8	Arrival Time:6	Used Time/Estimated RunTime:0/2	Priority:2	Status:0
+Process ID:9	Arrival Time:6	Used Time/Estimated RunTime:0/10	Priority:5	Status:0
+Process ID:10	Arrival Time:2	Used Time/Estimated RunTime:0/5	Priority:6	Status:0
+==================
+Time=0
+------------------Load arrival processed
+Process 4 arrived
+Process 2 arrived
+------------------Begin Scheduling
+Current running proces: 
+Process ID:2	Arrival Time:0	Used Time/Estimated RunTime:0/1	Priority:3	Status:0
+Finished Processes:
+Process ID:2	Arrival Time:0	Used Time/Estimated RunTime:1/1	Priority:3	Status:2
+Waiting Queue:
+Process ID:4	Arrival Time:0	Used Time/Estimated RunTime:0/8	Priority:1	Status:0
+==================
+Time=1
+------------------Load arrival processed
+------------------Begin Scheduling
+Current running proces: 
+Process ID:4	Arrival Time:0	Used Time/Estimated RunTime:0/8	Priority:1	Status:0
+Finished Processes:
+Process ID:2	Arrival Time:0	Used Time/Estimated RunTime:1/1	Priority:3	Status:2
+Waiting Queue:
+Process ID:4	Arrival Time:0	Used Time/Estimated RunTime:1/8	Priority:0	Status:0
+==================
+Time=2
+------------------Load arrival processed
+Process 10 arrived
+------------------Begin Scheduling
+Current running proces: 
+Process ID:10	Arrival Time:2	Used Time/Estimated RunTime:0/5	Priority:6	Status:0
+Finished Processes:
+Process ID:2	Arrival Time:0	Used Time/Estimated RunTime:1/1	Priority:3	Status:2
+Waiting Queue:
+Process ID:10	Arrival Time:2	Used Time/Estimated RunTime:1/5	Priority:5	Status:0
+Process ID:4	Arrival Time:0	Used Time/Estimated RunTime:1/8	Priority:0	Status:0
+==================
+Time=3
+------------------Load arrival processed
+------------------Begin Scheduling
+Current running proces: 
+Process ID:10	Arrival Time:2	Used Time/Estimated RunTime:1/5	Priority:5	Status:0
+Finished Processes:
+Process ID:2	Arrival Time:0	Used Time/Estimated RunTime:1/1	Priority:3	Status:2
+Waiting Queue:
+Process ID:10	Arrival Time:2	Used Time/Estimated RunTime:2/5	Priority:4	Status:0
+Process ID:4	Arrival Time:0	Used Time/Estimated RunTime:1/8	Priority:0	Status:0
+==================
+Time=4
+------------------Load arrival processed
+Process 5 arrived
+Process 1 arrived
+------------------Begin Scheduling
+Current running proces: 
+Process ID:1	Arrival Time:4	Used Time/Estimated RunTime:0/3	Priority:6	Status:0
+Finished Processes:
+Process ID:2	Arrival Time:0	Used Time/Estimated RunTime:1/1	Priority:3	Status:2
+Waiting Queue:
+Process ID:1	Arrival Time:4	Used Time/Estimated RunTime:1/3	Priority:5	Status:0
+Process ID:10	Arrival Time:2	Used Time/Estimated RunTime:2/5	Priority:4	Status:0
+Process ID:5	Arrival Time:4	Used Time/Estimated RunTime:0/2	Priority:3	Status:0
+Process ID:4	Arrival Time:0	Used Time/Estimated RunTime:1/8	Priority:0	Status:0
+==================
+Time=5
+------------------Load arrival processed
+Process 3 arrived
+------------------Begin Scheduling
+Current running proces: 
+Process ID:1	Arrival Time:4	Used Time/Estimated RunTime:1/3	Priority:5	Status:0
+Finished Processes:
+Process ID:2	Arrival Time:0	Used Time/Estimated RunTime:1/1	Priority:3	Status:2
+Waiting Queue:
+Process ID:10	Arrival Time:2	Used Time/Estimated RunTime:2/5	Priority:4	Status:0
+Process ID:1	Arrival Time:4	Used Time/Estimated RunTime:2/3	Priority:4	Status:0
+Process ID:5	Arrival Time:4	Used Time/Estimated RunTime:0/2	Priority:3	Status:0
+Process ID:3	Arrival Time:5	Used Time/Estimated RunTime:0/9	Priority:3	Status:0
+Process ID:4	Arrival Time:0	Used Time/Estimated RunTime:1/8	Priority:0	Status:0
+==================
+Time=6
+------------------Load arrival processed
+Process 9 arrived
+Process 8 arrived
+Process 6 arrived
+------------------Begin Scheduling
+Current running proces: 
+Process ID:9	Arrival Time:6	Used Time/Estimated RunTime:0/10	Priority:5	Status:0
+Finished Processes:
+Process ID:2	Arrival Time:0	Used Time/Estimated RunTime:1/1	Priority:3	Status:2
+Waiting Queue:
+Process ID:10	Arrival Time:2	Used Time/Estimated RunTime:2/5	Priority:4	Status:0
+Process ID:1	Arrival Time:4	Used Time/Estimated RunTime:2/3	Priority:4	Status:0
+Process ID:6	Arrival Time:6	Used Time/Estimated RunTime:0/2	Priority:4	Status:0
+Process ID:9	Arrival Time:6	Used Time/Estimated RunTime:1/10	Priority:4	Status:0
+Process ID:5	Arrival Time:4	Used Time/Estimated RunTime:0/2	Priority:3	Status:0
+Process ID:3	Arrival Time:5	Used Time/Estimated RunTime:0/9	Priority:3	Status:0
+Process ID:8	Arrival Time:6	Used Time/Estimated RunTime:0/2	Priority:2	Status:0
+Process ID:4	Arrival Time:0	Used Time/Estimated RunTime:1/8	Priority:0	Status:0
+==================
+Time=7
+------------------Load arrival processed
+Process 7 arrived
+------------------Begin Scheduling
+Current running proces: 
+Process ID:7	Arrival Time:7	Used Time/Estimated RunTime:0/5	Priority:9	Status:0
+Finished Processes:
+Process ID:2	Arrival Time:0	Used Time/Estimated RunTime:1/1	Priority:3	Status:2
+Waiting Queue:
+Process ID:7	Arrival Time:7	Used Time/Estimated RunTime:1/5	Priority:8	Status:0
+Process ID:9	Arrival Time:6	Used Time/Estimated RunTime:1/10	Priority:4	Status:0
+Process ID:1	Arrival Time:4	Used Time/Estimated RunTime:2/3	Priority:4	Status:0
+Process ID:6	Arrival Time:6	Used Time/Estimated RunTime:0/2	Priority:4	Status:0
+Process ID:10	Arrival Time:2	Used Time/Estimated RunTime:2/5	Priority:4	Status:0
+Process ID:3	Arrival Time:5	Used Time/Estimated RunTime:0/9	Priority:3	Status:0
+Process ID:5	Arrival Time:4	Used Time/Estimated RunTime:0/2	Priority:3	Status:0
+Process ID:8	Arrival Time:6	Used Time/Estimated RunTime:0/2	Priority:2	Status:0
+Process ID:4	Arrival Time:0	Used Time/Estimated RunTime:1/8	Priority:0	Status:0
+==================
+Time=8
+------------------Load arrival processed
+------------------Begin Scheduling
+Current running proces: 
+Process ID:7	Arrival Time:7	Used Time/Estimated RunTime:1/5	Priority:8	Status:0
+Finished Processes:
+Process ID:2	Arrival Time:0	Used Time/Estimated RunTime:1/1	Priority:3	Status:2
+Waiting Queue:
+Process ID:7	Arrival Time:7	Used Time/Estimated RunTime:2/5	Priority:7	Status:0
+Process ID:1	Arrival Time:4	Used Time/Estimated RunTime:2/3	Priority:4	Status:0
+Process ID:10	Arrival Time:2	Used Time/Estimated RunTime:2/5	Priority:4	Status:0
+Process ID:6	Arrival Time:6	Used Time/Estimated RunTime:0/2	Priority:4	Status:0
+Process ID:9	Arrival Time:6	Used Time/Estimated RunTime:1/10	Priority:4	Status:0
+Process ID:5	Arrival Time:4	Used Time/Estimated RunTime:0/2	Priority:3	Status:0
+Process ID:3	Arrival Time:5	Used Time/Estimated RunTime:0/9	Priority:3	Status:0
+Process ID:8	Arrival Time:6	Used Time/Estimated RunTime:0/2	Priority:2	Status:0
+Process ID:4	Arrival Time:0	Used Time/Estimated RunTime:1/8	Priority:0	Status:0
+==================
+Time=9
+------------------Load arrival processed
+------------------Begin Scheduling
+Current running proces: 
+Process ID:7	Arrival Time:7	Used Time/Estimated RunTime:2/5	Priority:7	Status:0
+Finished Processes:
+Process ID:2	Arrival Time:0	Used Time/Estimated RunTime:1/1	Priority:3	Status:2
+Waiting Queue:
+Process ID:7	Arrival Time:7	Used Time/Estimated RunTime:3/5	Priority:6	Status:0
+Process ID:10	Arrival Time:2	Used Time/Estimated RunTime:2/5	Priority:4	Status:0
+Process ID:9	Arrival Time:6	Used Time/Estimated RunTime:1/10	Priority:4	Status:0
+Process ID:6	Arrival Time:6	Used Time/Estimated RunTime:0/2	Priority:4	Status:0
+Process ID:1	Arrival Time:4	Used Time/Estimated RunTime:2/3	Priority:4	Status:0
+Process ID:3	Arrival Time:5	Used Time/Estimated RunTime:0/9	Priority:3	Status:0
+Process ID:5	Arrival Time:4	Used Time/Estimated RunTime:0/2	Priority:3	Status:0
+Process ID:8	Arrival Time:6	Used Time/Estimated RunTime:0/2	Priority:2	Status:0
+Process ID:4	Arrival Time:0	Used Time/Estimated RunTime:1/8	Priority:0	Status:0
+==================
+Time=10
+------------------Load arrival processed
+------------------Begin Scheduling
+Current running proces: 
+Process ID:7	Arrival Time:7	Used Time/Estimated RunTime:3/5	Priority:6	Status:0
+Finished Processes:
+Process ID:2	Arrival Time:0	Used Time/Estimated RunTime:1/1	Priority:3	Status:2
+Waiting Queue:
+Process ID:7	Arrival Time:7	Used Time/Estimated RunTime:4/5	Priority:5	Status:0
+Process ID:9	Arrival Time:6	Used Time/Estimated RunTime:1/10	Priority:4	Status:0
+Process ID:1	Arrival Time:4	Used Time/Estimated RunTime:2/3	Priority:4	Status:0
+Process ID:6	Arrival Time:6	Used Time/Estimated RunTime:0/2	Priority:4	Status:0
+Process ID:10	Arrival Time:2	Used Time/Estimated RunTime:2/5	Priority:4	Status:0
+Process ID:5	Arrival Time:4	Used Time/Estimated RunTime:0/2	Priority:3	Status:0
+Process ID:3	Arrival Time:5	Used Time/Estimated RunTime:0/9	Priority:3	Status:0
+Process ID:8	Arrival Time:6	Used Time/Estimated RunTime:0/2	Priority:2	Status:0
+Process ID:4	Arrival Time:0	Used Time/Estimated RunTime:1/8	Priority:0	Status:0
+==================
+Time=11
+------------------Load arrival processed
+------------------Begin Scheduling
+Current running proces: 
+Process ID:7	Arrival Time:7	Used Time/Estimated RunTime:4/5	Priority:5	Status:0
+Finished Processes:
+Process ID:2	Arrival Time:0	Used Time/Estimated RunTime:1/1	Priority:3	Status:2
+Process ID:7	Arrival Time:7	Used Time/Estimated RunTime:5/5	Priority:5	Status:2
+Waiting Queue:
+Process ID:1	Arrival Time:4	Used Time/Estimated RunTime:2/3	Priority:4	Status:0
+Process ID:9	Arrival Time:6	Used Time/Estimated RunTime:1/10	Priority:4	Status:0
+Process ID:10	Arrival Time:2	Used Time/Estimated RunTime:2/5	Priority:4	Status:0
+Process ID:6	Arrival Time:6	Used Time/Estimated RunTime:0/2	Priority:4	Status:0
+Process ID:3	Arrival Time:5	Used Time/Estimated RunTime:0/9	Priority:3	Status:0
+Process ID:5	Arrival Time:4	Used Time/Estimated RunTime:0/2	Priority:3	Status:0
+Process ID:8	Arrival Time:6	Used Time/Estimated RunTime:0/2	Priority:2	Status:0
+Process ID:4	Arrival Time:0	Used Time/Estimated RunTime:1/8	Priority:0	Status:0
+==================
+Time=12
+------------------Load arrival processed
+------------------Begin Scheduling
+Current running proces: 
+Process ID:1	Arrival Time:4	Used Time/Estimated RunTime:2/3	Priority:4	Status:0
+Finished Processes:
+Process ID:2	Arrival Time:0	Used Time/Estimated RunTime:1/1	Priority:3	Status:2
+Process ID:7	Arrival Time:7	Used Time/Estimated RunTime:5/5	Priority:5	Status:2
+Process ID:1	Arrival Time:4	Used Time/Estimated RunTime:3/3	Priority:4	Status:2
+Waiting Queue:
+Process ID:10	Arrival Time:2	Used Time/Estimated RunTime:2/5	Priority:4	Status:0
+Process ID:9	Arrival Time:6	Used Time/Estimated RunTime:1/10	Priority:4	Status:0
+Process ID:6	Arrival Time:6	Used Time/Estimated RunTime:0/2	Priority:4	Status:0
+Process ID:5	Arrival Time:4	Used Time/Estimated RunTime:0/2	Priority:3	Status:0
+Process ID:3	Arrival Time:5	Used Time/Estimated RunTime:0/9	Priority:3	Status:0
+Process ID:8	Arrival Time:6	Used Time/Estimated RunTime:0/2	Priority:2	Status:0
+Process ID:4	Arrival Time:0	Used Time/Estimated RunTime:1/8	Priority:0	Status:0
+==================
+Time=13
+------------------Load arrival processed
+------------------Begin Scheduling
+Current running proces: 
+Process ID:10	Arrival Time:2	Used Time/Estimated RunTime:2/5	Priority:4	Status:0
+Finished Processes:
+Process ID:2	Arrival Time:0	Used Time/Estimated RunTime:1/1	Priority:3	Status:2
+Process ID:7	Arrival Time:7	Used Time/Estimated RunTime:5/5	Priority:5	Status:2
+Process ID:1	Arrival Time:4	Used Time/Estimated RunTime:3/3	Priority:4	Status:2
+Waiting Queue:
+Process ID:6	Arrival Time:6	Used Time/Estimated RunTime:0/2	Priority:4	Status:0
+Process ID:9	Arrival Time:6	Used Time/Estimated RunTime:1/10	Priority:4	Status:0
+Process ID:10	Arrival Time:2	Used Time/Estimated RunTime:3/5	Priority:3	Status:0
+Process ID:3	Arrival Time:5	Used Time/Estimated RunTime:0/9	Priority:3	Status:0
+Process ID:5	Arrival Time:4	Used Time/Estimated RunTime:0/2	Priority:3	Status:0
+Process ID:8	Arrival Time:6	Used Time/Estimated RunTime:0/2	Priority:2	Status:0
+Process ID:4	Arrival Time:0	Used Time/Estimated RunTime:1/8	Priority:0	Status:0
+==================
+Time=14
+------------------Load arrival processed
+------------------Begin Scheduling
+Current running proces: 
+Process ID:6	Arrival Time:6	Used Time/Estimated RunTime:0/2	Priority:4	Status:0
+Finished Processes:
+Process ID:2	Arrival Time:0	Used Time/Estimated RunTime:1/1	Priority:3	Status:2
+Process ID:7	Arrival Time:7	Used Time/Estimated RunTime:5/5	Priority:5	Status:2
+Process ID:1	Arrival Time:4	Used Time/Estimated RunTime:3/3	Priority:4	Status:2
+Waiting Queue:
+Process ID:9	Arrival Time:6	Used Time/Estimated RunTime:1/10	Priority:4	Status:0
+Process ID:10	Arrival Time:2	Used Time/Estimated RunTime:3/5	Priority:3	Status:0
+Process ID:6	Arrival Time:6	Used Time/Estimated RunTime:1/2	Priority:3	Status:0
+Process ID:5	Arrival Time:4	Used Time/Estimated RunTime:0/2	Priority:3	Status:0
+Process ID:3	Arrival Time:5	Used Time/Estimated RunTime:0/9	Priority:3	Status:0
+Process ID:8	Arrival Time:6	Used Time/Estimated RunTime:0/2	Priority:2	Status:0
+Process ID:4	Arrival Time:0	Used Time/Estimated RunTime:1/8	Priority:0	Status:0
+==================
+Time=15
+------------------Load arrival processed
+------------------Begin Scheduling
+Current running proces: 
+Process ID:9	Arrival Time:6	Used Time/Estimated RunTime:1/10	Priority:4	Status:0
+Finished Processes:
+Process ID:2	Arrival Time:0	Used Time/Estimated RunTime:1/1	Priority:3	Status:2
+Process ID:7	Arrival Time:7	Used Time/Estimated RunTime:5/5	Priority:5	Status:2
+Process ID:1	Arrival Time:4	Used Time/Estimated RunTime:3/3	Priority:4	Status:2
+Waiting Queue:
+Process ID:6	Arrival Time:6	Used Time/Estimated RunTime:1/2	Priority:3	Status:0
+Process ID:9	Arrival Time:6	Used Time/Estimated RunTime:2/10	Priority:3	Status:0
+Process ID:10	Arrival Time:2	Used Time/Estimated RunTime:3/5	Priority:3	Status:0
+Process ID:3	Arrival Time:5	Used Time/Estimated RunTime:0/9	Priority:3	Status:0
+Process ID:5	Arrival Time:4	Used Time/Estimated RunTime:0/2	Priority:3	Status:0
+Process ID:8	Arrival Time:6	Used Time/Estimated RunTime:0/2	Priority:2	Status:0
+Process ID:4	Arrival Time:0	Used Time/Estimated RunTime:1/8	Priority:0	Status:0
+==================
+Time=16
+------------------Load arrival processed
+------------------Begin Scheduling
+Current running proces: 
+Process ID:6	Arrival Time:6	Used Time/Estimated RunTime:1/2	Priority:3	Status:0
+Finished Processes:
+Process ID:2	Arrival Time:0	Used Time/Estimated RunTime:1/1	Priority:3	Status:2
+Process ID:7	Arrival Time:7	Used Time/Estimated RunTime:5/5	Priority:5	Status:2
+Process ID:1	Arrival Time:4	Used Time/Estimated RunTime:3/3	Priority:4	Status:2
+Process ID:6	Arrival Time:6	Used Time/Estimated RunTime:2/2	Priority:3	Status:2
+Waiting Queue:
+Process ID:10	Arrival Time:2	Used Time/Estimated RunTime:3/5	Priority:3	Status:0
+Process ID:9	Arrival Time:6	Used Time/Estimated RunTime:2/10	Priority:3	Status:0
+Process ID:5	Arrival Time:4	Used Time/Estimated RunTime:0/2	Priority:3	Status:0
+Process ID:3	Arrival Time:5	Used Time/Estimated RunTime:0/9	Priority:3	Status:0
+Process ID:8	Arrival Time:6	Used Time/Estimated RunTime:0/2	Priority:2	Status:0
+Process ID:4	Arrival Time:0	Used Time/Estimated RunTime:1/8	Priority:0	Status:0
+==================
+Time=17
+------------------Load arrival processed
+------------------Begin Scheduling
+Current running proces: 
+Process ID:10	Arrival Time:2	Used Time/Estimated RunTime:3/5	Priority:3	Status:0
+Finished Processes:
+Process ID:2	Arrival Time:0	Used Time/Estimated RunTime:1/1	Priority:3	Status:2
+Process ID:7	Arrival Time:7	Used Time/Estimated RunTime:5/5	Priority:5	Status:2
+Process ID:1	Arrival Time:4	Used Time/Estimated RunTime:3/3	Priority:4	Status:2
+Process ID:6	Arrival Time:6	Used Time/Estimated RunTime:2/2	Priority:3	Status:2
+Waiting Queue:
+Process ID:5	Arrival Time:4	Used Time/Estimated RunTime:0/2	Priority:3	Status:0
+Process ID:9	Arrival Time:6	Used Time/Estimated RunTime:2/10	Priority:3	Status:0
+Process ID:3	Arrival Time:5	Used Time/Estimated RunTime:0/9	Priority:3	Status:0
+Process ID:10	Arrival Time:2	Used Time/Estimated RunTime:4/5	Priority:2	Status:0
+Process ID:8	Arrival Time:6	Used Time/Estimated RunTime:0/2	Priority:2	Status:0
+Process ID:4	Arrival Time:0	Used Time/Estimated RunTime:1/8	Priority:0	Status:0
+==================
+Time=18
+------------------Load arrival processed
+------------------Begin Scheduling
+Current running proces: 
+Process ID:5	Arrival Time:4	Used Time/Estimated RunTime:0/2	Priority:3	Status:0
+Finished Processes:
+Process ID:2	Arrival Time:0	Used Time/Estimated RunTime:1/1	Priority:3	Status:2
+Process ID:7	Arrival Time:7	Used Time/Estimated RunTime:5/5	Priority:5	Status:2
+Process ID:1	Arrival Time:4	Used Time/Estimated RunTime:3/3	Priority:4	Status:2
+Process ID:6	Arrival Time:6	Used Time/Estimated RunTime:2/2	Priority:3	Status:2
+Waiting Queue:
+Process ID:3	Arrival Time:5	Used Time/Estimated RunTime:0/9	Priority:3	Status:0
+Process ID:9	Arrival Time:6	Used Time/Estimated RunTime:2/10	Priority:3	Status:0
+Process ID:5	Arrival Time:4	Used Time/Estimated RunTime:1/2	Priority:2	Status:0
+Process ID:8	Arrival Time:6	Used Time/Estimated RunTime:0/2	Priority:2	Status:0
+Process ID:10	Arrival Time:2	Used Time/Estimated RunTime:4/5	Priority:2	Status:0
+Process ID:4	Arrival Time:0	Used Time/Estimated RunTime:1/8	Priority:0	Status:0
+==================
+Time=19
+------------------Load arrival processed
+------------------Begin Scheduling
+Current running proces: 
+Process ID:3	Arrival Time:5	Used Time/Estimated RunTime:0/9	Priority:3	Status:0
+Finished Processes:
+Process ID:2	Arrival Time:0	Used Time/Estimated RunTime:1/1	Priority:3	Status:2
+Process ID:7	Arrival Time:7	Used Time/Estimated RunTime:5/5	Priority:5	Status:2
+Process ID:1	Arrival Time:4	Used Time/Estimated RunTime:3/3	Priority:4	Status:2
+Process ID:6	Arrival Time:6	Used Time/Estimated RunTime:2/2	Priority:3	Status:2
+Waiting Queue:
+Process ID:9	Arrival Time:6	Used Time/Estimated RunTime:2/10	Priority:3	Status:0
+Process ID:5	Arrival Time:4	Used Time/Estimated RunTime:1/2	Priority:2	Status:0
+Process ID:3	Arrival Time:5	Used Time/Estimated RunTime:1/9	Priority:2	Status:0
+Process ID:10	Arrival Time:2	Used Time/Estimated RunTime:4/5	Priority:2	Status:0
+Process ID:8	Arrival Time:6	Used Time/Estimated RunTime:0/2	Priority:2	Status:0
+Process ID:4	Arrival Time:0	Used Time/Estimated RunTime:1/8	Priority:0	Status:0
+==================
+Time=20
+------------------Load arrival processed
+------------------Begin Scheduling
+Current running proces: 
+Process ID:9	Arrival Time:6	Used Time/Estimated RunTime:2/10	Priority:3	Status:0
+Finished Processes:
+Process ID:2	Arrival Time:0	Used Time/Estimated RunTime:1/1	Priority:3	Status:2
+Process ID:7	Arrival Time:7	Used Time/Estimated RunTime:5/5	Priority:5	Status:2
+Process ID:1	Arrival Time:4	Used Time/Estimated RunTime:3/3	Priority:4	Status:2
+Process ID:6	Arrival Time:6	Used Time/Estimated RunTime:2/2	Priority:3	Status:2
+Waiting Queue:
+Process ID:3	Arrival Time:5	Used Time/Estimated RunTime:1/9	Priority:2	Status:0
+Process ID:9	Arrival Time:6	Used Time/Estimated RunTime:3/10	Priority:2	Status:0
+Process ID:5	Arrival Time:4	Used Time/Estimated RunTime:1/2	Priority:2	Status:0
+Process ID:10	Arrival Time:2	Used Time/Estimated RunTime:4/5	Priority:2	Status:0
+Process ID:8	Arrival Time:6	Used Time/Estimated RunTime:0/2	Priority:2	Status:0
+Process ID:4	Arrival Time:0	Used Time/Estimated RunTime:1/8	Priority:0	Status:0
+==================
+Time=21
+------------------Load arrival processed
+------------------Begin Scheduling
+Current running proces: 
+Process ID:3	Arrival Time:5	Used Time/Estimated RunTime:1/9	Priority:2	Status:0
+Finished Processes:
+Process ID:2	Arrival Time:0	Used Time/Estimated RunTime:1/1	Priority:3	Status:2
+Process ID:7	Arrival Time:7	Used Time/Estimated RunTime:5/5	Priority:5	Status:2
+Process ID:1	Arrival Time:4	Used Time/Estimated RunTime:3/3	Priority:4	Status:2
+Process ID:6	Arrival Time:6	Used Time/Estimated RunTime:2/2	Priority:3	Status:2
+Waiting Queue:
+Process ID:5	Arrival Time:4	Used Time/Estimated RunTime:1/2	Priority:2	Status:0
+Process ID:9	Arrival Time:6	Used Time/Estimated RunTime:3/10	Priority:2	Status:0
+Process ID:8	Arrival Time:6	Used Time/Estimated RunTime:0/2	Priority:2	Status:0
+Process ID:10	Arrival Time:2	Used Time/Estimated RunTime:4/5	Priority:2	Status:0
+Process ID:3	Arrival Time:5	Used Time/Estimated RunTime:2/9	Priority:1	Status:0
+Process ID:4	Arrival Time:0	Used Time/Estimated RunTime:1/8	Priority:0	Status:0
+==================
+Time=22
+------------------Load arrival processed
+------------------Begin Scheduling
+Current running proces: 
+Process ID:5	Arrival Time:4	Used Time/Estimated RunTime:1/2	Priority:2	Status:0
+Finished Processes:
+Process ID:2	Arrival Time:0	Used Time/Estimated RunTime:1/1	Priority:3	Status:2
+Process ID:7	Arrival Time:7	Used Time/Estimated RunTime:5/5	Priority:5	Status:2
+Process ID:1	Arrival Time:4	Used Time/Estimated RunTime:3/3	Priority:4	Status:2
+Process ID:6	Arrival Time:6	Used Time/Estimated RunTime:2/2	Priority:3	Status:2
+Process ID:5	Arrival Time:4	Used Time/Estimated RunTime:2/2	Priority:2	Status:2
+Waiting Queue:
+Process ID:8	Arrival Time:6	Used Time/Estimated RunTime:0/2	Priority:2	Status:0
+Process ID:9	Arrival Time:6	Used Time/Estimated RunTime:3/10	Priority:2	Status:0
+Process ID:10	Arrival Time:2	Used Time/Estimated RunTime:4/5	Priority:2	Status:0
+Process ID:3	Arrival Time:5	Used Time/Estimated RunTime:2/9	Priority:1	Status:0
+Process ID:4	Arrival Time:0	Used Time/Estimated RunTime:1/8	Priority:0	Status:0
+==================
+Time=23
+------------------Load arrival processed
+------------------Begin Scheduling
+Current running proces: 
+Process ID:8	Arrival Time:6	Used Time/Estimated RunTime:0/2	Priority:2	Status:0
+Finished Processes:
+Process ID:2	Arrival Time:0	Used Time/Estimated RunTime:1/1	Priority:3	Status:2
+Process ID:7	Arrival Time:7	Used Time/Estimated RunTime:5/5	Priority:5	Status:2
+Process ID:1	Arrival Time:4	Used Time/Estimated RunTime:3/3	Priority:4	Status:2
+Process ID:6	Arrival Time:6	Used Time/Estimated RunTime:2/2	Priority:3	Status:2
+Process ID:5	Arrival Time:4	Used Time/Estimated RunTime:2/2	Priority:2	Status:2
+Waiting Queue:
+Process ID:10	Arrival Time:2	Used Time/Estimated RunTime:4/5	Priority:2	Status:0
+Process ID:9	Arrival Time:6	Used Time/Estimated RunTime:3/10	Priority:2	Status:0
+Process ID:3	Arrival Time:5	Used Time/Estimated RunTime:2/9	Priority:1	Status:0
+Process ID:8	Arrival Time:6	Used Time/Estimated RunTime:1/2	Priority:1	Status:0
+Process ID:4	Arrival Time:0	Used Time/Estimated RunTime:1/8	Priority:0	Status:0
+==================
+Time=24
+------------------Load arrival processed
+------------------Begin Scheduling
+Current running proces: 
+Process ID:10	Arrival Time:2	Used Time/Estimated RunTime:4/5	Priority:2	Status:0
+Finished Processes:
+Process ID:2	Arrival Time:0	Used Time/Estimated RunTime:1/1	Priority:3	Status:2
+Process ID:7	Arrival Time:7	Used Time/Estimated RunTime:5/5	Priority:5	Status:2
+Process ID:1	Arrival Time:4	Used Time/Estimated RunTime:3/3	Priority:4	Status:2
+Process ID:6	Arrival Time:6	Used Time/Estimated RunTime:2/2	Priority:3	Status:2
+Process ID:5	Arrival Time:4	Used Time/Estimated RunTime:2/2	Priority:2	Status:2
+Process ID:10	Arrival Time:2	Used Time/Estimated RunTime:5/5	Priority:2	Status:2
+Waiting Queue:
+Process ID:9	Arrival Time:6	Used Time/Estimated RunTime:3/10	Priority:2	Status:0
+Process ID:3	Arrival Time:5	Used Time/Estimated RunTime:2/9	Priority:1	Status:0
+Process ID:8	Arrival Time:6	Used Time/Estimated RunTime:1/2	Priority:1	Status:0
+Process ID:4	Arrival Time:0	Used Time/Estimated RunTime:1/8	Priority:0	Status:0
+==================
+Time=25
+------------------Load arrival processed
+------------------Begin Scheduling
+Current running proces: 
+Process ID:9	Arrival Time:6	Used Time/Estimated RunTime:3/10	Priority:2	Status:0
+Finished Processes:
+Process ID:2	Arrival Time:0	Used Time/Estimated RunTime:1/1	Priority:3	Status:2
+Process ID:7	Arrival Time:7	Used Time/Estimated RunTime:5/5	Priority:5	Status:2
+Process ID:1	Arrival Time:4	Used Time/Estimated RunTime:3/3	Priority:4	Status:2
+Process ID:6	Arrival Time:6	Used Time/Estimated RunTime:2/2	Priority:3	Status:2
+Process ID:5	Arrival Time:4	Used Time/Estimated RunTime:2/2	Priority:2	Status:2
+Process ID:10	Arrival Time:2	Used Time/Estimated RunTime:5/5	Priority:2	Status:2
+Waiting Queue:
+Process ID:8	Arrival Time:6	Used Time/Estimated RunTime:1/2	Priority:1	Status:0
+Process ID:3	Arrival Time:5	Used Time/Estimated RunTime:2/9	Priority:1	Status:0
+Process ID:9	Arrival Time:6	Used Time/Estimated RunTime:4/10	Priority:1	Status:0
+Process ID:4	Arrival Time:0	Used Time/Estimated RunTime:1/8	Priority:0	Status:0
+==================
+Time=26
+------------------Load arrival processed
+------------------Begin Scheduling
+Current running proces: 
+Process ID:8	Arrival Time:6	Used Time/Estimated RunTime:1/2	Priority:1	Status:0
+Finished Processes:
+Process ID:2	Arrival Time:0	Used Time/Estimated RunTime:1/1	Priority:3	Status:2
+Process ID:7	Arrival Time:7	Used Time/Estimated RunTime:5/5	Priority:5	Status:2
+Process ID:1	Arrival Time:4	Used Time/Estimated RunTime:3/3	Priority:4	Status:2
+Process ID:6	Arrival Time:6	Used Time/Estimated RunTime:2/2	Priority:3	Status:2
+Process ID:5	Arrival Time:4	Used Time/Estimated RunTime:2/2	Priority:2	Status:2
+Process ID:10	Arrival Time:2	Used Time/Estimated RunTime:5/5	Priority:2	Status:2
+Process ID:8	Arrival Time:6	Used Time/Estimated RunTime:2/2	Priority:1	Status:2
+Waiting Queue:
+Process ID:9	Arrival Time:6	Used Time/Estimated RunTime:4/10	Priority:1	Status:0
+Process ID:3	Arrival Time:5	Used Time/Estimated RunTime:2/9	Priority:1	Status:0
+Process ID:4	Arrival Time:0	Used Time/Estimated RunTime:1/8	Priority:0	Status:0
+==================
+Time=27
+------------------Load arrival processed
+------------------Begin Scheduling
+Current running proces: 
+Process ID:9	Arrival Time:6	Used Time/Estimated RunTime:4/10	Priority:1	Status:0
+Finished Processes:
+Process ID:2	Arrival Time:0	Used Time/Estimated RunTime:1/1	Priority:3	Status:2
+Process ID:7	Arrival Time:7	Used Time/Estimated RunTime:5/5	Priority:5	Status:2
+Process ID:1	Arrival Time:4	Used Time/Estimated RunTime:3/3	Priority:4	Status:2
+Process ID:6	Arrival Time:6	Used Time/Estimated RunTime:2/2	Priority:3	Status:2
+Process ID:5	Arrival Time:4	Used Time/Estimated RunTime:2/2	Priority:2	Status:2
+Process ID:10	Arrival Time:2	Used Time/Estimated RunTime:5/5	Priority:2	Status:2
+Process ID:8	Arrival Time:6	Used Time/Estimated RunTime:2/2	Priority:1	Status:2
+Waiting Queue:
+Process ID:3	Arrival Time:5	Used Time/Estimated RunTime:2/9	Priority:1	Status:0
+Process ID:4	Arrival Time:0	Used Time/Estimated RunTime:1/8	Priority:0	Status:0
+Process ID:9	Arrival Time:6	Used Time/Estimated RunTime:5/10	Priority:0	Status:0
+==================
+Time=28
+------------------Load arrival processed
+------------------Begin Scheduling
+Current running proces: 
+Process ID:3	Arrival Time:5	Used Time/Estimated RunTime:2/9	Priority:1	Status:0
+Finished Processes:
+Process ID:2	Arrival Time:0	Used Time/Estimated RunTime:1/1	Priority:3	Status:2
+Process ID:7	Arrival Time:7	Used Time/Estimated RunTime:5/5	Priority:5	Status:2
+Process ID:1	Arrival Time:4	Used Time/Estimated RunTime:3/3	Priority:4	Status:2
+Process ID:6	Arrival Time:6	Used Time/Estimated RunTime:2/2	Priority:3	Status:2
+Process ID:5	Arrival Time:4	Used Time/Estimated RunTime:2/2	Priority:2	Status:2
+Process ID:10	Arrival Time:2	Used Time/Estimated RunTime:5/5	Priority:2	Status:2
+Process ID:8	Arrival Time:6	Used Time/Estimated RunTime:2/2	Priority:1	Status:2
+Waiting Queue:
+Process ID:4	Arrival Time:0	Used Time/Estimated RunTime:1/8	Priority:0	Status:0
+Process ID:9	Arrival Time:6	Used Time/Estimated RunTime:5/10	Priority:0	Status:0
+Process ID:3	Arrival Time:5	Used Time/Estimated RunTime:3/9	Priority:0	Status:0
+==================
+Time=29
+------------------Load arrival processed
+------------------Begin Scheduling
+Current running proces: 
+Process ID:4	Arrival Time:0	Used Time/Estimated RunTime:1/8	Priority:0	Status:0
+Finished Processes:
+Process ID:2	Arrival Time:0	Used Time/Estimated RunTime:1/1	Priority:3	Status:2
+Process ID:7	Arrival Time:7	Used Time/Estimated RunTime:5/5	Priority:5	Status:2
+Process ID:1	Arrival Time:4	Used Time/Estimated RunTime:3/3	Priority:4	Status:2
+Process ID:6	Arrival Time:6	Used Time/Estimated RunTime:2/2	Priority:3	Status:2
+Process ID:5	Arrival Time:4	Used Time/Estimated RunTime:2/2	Priority:2	Status:2
+Process ID:10	Arrival Time:2	Used Time/Estimated RunTime:5/5	Priority:2	Status:2
+Process ID:8	Arrival Time:6	Used Time/Estimated RunTime:2/2	Priority:1	Status:2
+Waiting Queue:
+Process ID:9	Arrival Time:6	Used Time/Estimated RunTime:5/10	Priority:0	Status:0
+Process ID:3	Arrival Time:5	Used Time/Estimated RunTime:3/9	Priority:0	Status:0
+Process ID:4	Arrival Time:0	Used Time/Estimated RunTime:2/8	Priority:-1	Status:0
+==================
+Time=30
+------------------Load arrival processed
+------------------Begin Scheduling
+Current running proces: 
+Process ID:9	Arrival Time:6	Used Time/Estimated RunTime:5/10	Priority:0	Status:0
+Finished Processes:
+Process ID:2	Arrival Time:0	Used Time/Estimated RunTime:1/1	Priority:3	Status:2
+Process ID:7	Arrival Time:7	Used Time/Estimated RunTime:5/5	Priority:5	Status:2
+Process ID:1	Arrival Time:4	Used Time/Estimated RunTime:3/3	Priority:4	Status:2
+Process ID:6	Arrival Time:6	Used Time/Estimated RunTime:2/2	Priority:3	Status:2
+Process ID:5	Arrival Time:4	Used Time/Estimated RunTime:2/2	Priority:2	Status:2
+Process ID:10	Arrival Time:2	Used Time/Estimated RunTime:5/5	Priority:2	Status:2
+Process ID:8	Arrival Time:6	Used Time/Estimated RunTime:2/2	Priority:1	Status:2
+Waiting Queue:
+Process ID:3	Arrival Time:5	Used Time/Estimated RunTime:3/9	Priority:0	Status:0
+Process ID:4	Arrival Time:0	Used Time/Estimated RunTime:2/8	Priority:-1	Status:0
+Process ID:9	Arrival Time:6	Used Time/Estimated RunTime:6/10	Priority:-1	Status:0
+==================
+Time=31
+------------------Load arrival processed
+------------------Begin Scheduling
+Current running proces: 
+Process ID:3	Arrival Time:5	Used Time/Estimated RunTime:3/9	Priority:0	Status:0
+Finished Processes:
+Process ID:2	Arrival Time:0	Used Time/Estimated RunTime:1/1	Priority:3	Status:2
+Process ID:7	Arrival Time:7	Used Time/Estimated RunTime:5/5	Priority:5	Status:2
+Process ID:1	Arrival Time:4	Used Time/Estimated RunTime:3/3	Priority:4	Status:2
+Process ID:6	Arrival Time:6	Used Time/Estimated RunTime:2/2	Priority:3	Status:2
+Process ID:5	Arrival Time:4	Used Time/Estimated RunTime:2/2	Priority:2	Status:2
+Process ID:10	Arrival Time:2	Used Time/Estimated RunTime:5/5	Priority:2	Status:2
+Process ID:8	Arrival Time:6	Used Time/Estimated RunTime:2/2	Priority:1	Status:2
+Waiting Queue:
+Process ID:4	Arrival Time:0	Used Time/Estimated RunTime:2/8	Priority:-1	Status:0
+Process ID:9	Arrival Time:6	Used Time/Estimated RunTime:6/10	Priority:-1	Status:0
+Process ID:3	Arrival Time:5	Used Time/Estimated RunTime:4/9	Priority:-1	Status:0
+==================
+Time=32
+------------------Load arrival processed
+------------------Begin Scheduling
+Current running proces: 
+Process ID:4	Arrival Time:0	Used Time/Estimated RunTime:2/8	Priority:-1	Status:0
+Finished Processes:
+Process ID:2	Arrival Time:0	Used Time/Estimated RunTime:1/1	Priority:3	Status:2
+Process ID:7	Arrival Time:7	Used Time/Estimated RunTime:5/5	Priority:5	Status:2
+Process ID:1	Arrival Time:4	Used Time/Estimated RunTime:3/3	Priority:4	Status:2
+Process ID:6	Arrival Time:6	Used Time/Estimated RunTime:2/2	Priority:3	Status:2
+Process ID:5	Arrival Time:4	Used Time/Estimated RunTime:2/2	Priority:2	Status:2
+Process ID:10	Arrival Time:2	Used Time/Estimated RunTime:5/5	Priority:2	Status:2
+Process ID:8	Arrival Time:6	Used Time/Estimated RunTime:2/2	Priority:1	Status:2
+Waiting Queue:
+Process ID:9	Arrival Time:6	Used Time/Estimated RunTime:6/10	Priority:-1	Status:0
+Process ID:3	Arrival Time:5	Used Time/Estimated RunTime:4/9	Priority:-1	Status:0
+Process ID:4	Arrival Time:0	Used Time/Estimated RunTime:3/8	Priority:-2	Status:0
+==================
+Time=33
+------------------Load arrival processed
+------------------Begin Scheduling
+Current running proces: 
+Process ID:9	Arrival Time:6	Used Time/Estimated RunTime:6/10	Priority:-1	Status:0
+Finished Processes:
+Process ID:2	Arrival Time:0	Used Time/Estimated RunTime:1/1	Priority:3	Status:2
+Process ID:7	Arrival Time:7	Used Time/Estimated RunTime:5/5	Priority:5	Status:2
+Process ID:1	Arrival Time:4	Used Time/Estimated RunTime:3/3	Priority:4	Status:2
+Process ID:6	Arrival Time:6	Used Time/Estimated RunTime:2/2	Priority:3	Status:2
+Process ID:5	Arrival Time:4	Used Time/Estimated RunTime:2/2	Priority:2	Status:2
+Process ID:10	Arrival Time:2	Used Time/Estimated RunTime:5/5	Priority:2	Status:2
+Process ID:8	Arrival Time:6	Used Time/Estimated RunTime:2/2	Priority:1	Status:2
+Waiting Queue:
+Process ID:3	Arrival Time:5	Used Time/Estimated RunTime:4/9	Priority:-1	Status:0
+Process ID:4	Arrival Time:0	Used Time/Estimated RunTime:3/8	Priority:-2	Status:0
+Process ID:9	Arrival Time:6	Used Time/Estimated RunTime:7/10	Priority:-2	Status:0
+==================
+Time=34
+------------------Load arrival processed
+------------------Begin Scheduling
+Current running proces: 
+Process ID:3	Arrival Time:5	Used Time/Estimated RunTime:4/9	Priority:-1	Status:0
+Finished Processes:
+Process ID:2	Arrival Time:0	Used Time/Estimated RunTime:1/1	Priority:3	Status:2
+Process ID:7	Arrival Time:7	Used Time/Estimated RunTime:5/5	Priority:5	Status:2
+Process ID:1	Arrival Time:4	Used Time/Estimated RunTime:3/3	Priority:4	Status:2
+Process ID:6	Arrival Time:6	Used Time/Estimated RunTime:2/2	Priority:3	Status:2
+Process ID:5	Arrival Time:4	Used Time/Estimated RunTime:2/2	Priority:2	Status:2
+Process ID:10	Arrival Time:2	Used Time/Estimated RunTime:5/5	Priority:2	Status:2
+Process ID:8	Arrival Time:6	Used Time/Estimated RunTime:2/2	Priority:1	Status:2
+Waiting Queue:
+Process ID:4	Arrival Time:0	Used Time/Estimated RunTime:3/8	Priority:-2	Status:0
+Process ID:9	Arrival Time:6	Used Time/Estimated RunTime:7/10	Priority:-2	Status:0
+Process ID:3	Arrival Time:5	Used Time/Estimated RunTime:5/9	Priority:-2	Status:0
+==================
+Time=35
+------------------Load arrival processed
+------------------Begin Scheduling
+Current running proces: 
+Process ID:4	Arrival Time:0	Used Time/Estimated RunTime:3/8	Priority:-2	Status:0
+Finished Processes:
+Process ID:2	Arrival Time:0	Used Time/Estimated RunTime:1/1	Priority:3	Status:2
+Process ID:7	Arrival Time:7	Used Time/Estimated RunTime:5/5	Priority:5	Status:2
+Process ID:1	Arrival Time:4	Used Time/Estimated RunTime:3/3	Priority:4	Status:2
+Process ID:6	Arrival Time:6	Used Time/Estimated RunTime:2/2	Priority:3	Status:2
+Process ID:5	Arrival Time:4	Used Time/Estimated RunTime:2/2	Priority:2	Status:2
+Process ID:10	Arrival Time:2	Used Time/Estimated RunTime:5/5	Priority:2	Status:2
+Process ID:8	Arrival Time:6	Used Time/Estimated RunTime:2/2	Priority:1	Status:2
+Waiting Queue:
+Process ID:9	Arrival Time:6	Used Time/Estimated RunTime:7/10	Priority:-2	Status:0
+Process ID:3	Arrival Time:5	Used Time/Estimated RunTime:5/9	Priority:-2	Status:0
+Process ID:4	Arrival Time:0	Used Time/Estimated RunTime:4/8	Priority:-3	Status:0
+==================
+Time=36
+------------------Load arrival processed
+------------------Begin Scheduling
+Current running proces: 
+Process ID:9	Arrival Time:6	Used Time/Estimated RunTime:7/10	Priority:-2	Status:0
+Finished Processes:
+Process ID:2	Arrival Time:0	Used Time/Estimated RunTime:1/1	Priority:3	Status:2
+Process ID:7	Arrival Time:7	Used Time/Estimated RunTime:5/5	Priority:5	Status:2
+Process ID:1	Arrival Time:4	Used Time/Estimated RunTime:3/3	Priority:4	Status:2
+Process ID:6	Arrival Time:6	Used Time/Estimated RunTime:2/2	Priority:3	Status:2
+Process ID:5	Arrival Time:4	Used Time/Estimated RunTime:2/2	Priority:2	Status:2
+Process ID:10	Arrival Time:2	Used Time/Estimated RunTime:5/5	Priority:2	Status:2
+Process ID:8	Arrival Time:6	Used Time/Estimated RunTime:2/2	Priority:1	Status:2
+Waiting Queue:
+Process ID:3	Arrival Time:5	Used Time/Estimated RunTime:5/9	Priority:-2	Status:0
+Process ID:4	Arrival Time:0	Used Time/Estimated RunTime:4/8	Priority:-3	Status:0
+Process ID:9	Arrival Time:6	Used Time/Estimated RunTime:8/10	Priority:-3	Status:0
+==================
+Time=37
+------------------Load arrival processed
+------------------Begin Scheduling
+Current running proces: 
+Process ID:3	Arrival Time:5	Used Time/Estimated RunTime:5/9	Priority:-2	Status:0
+Finished Processes:
+Process ID:2	Arrival Time:0	Used Time/Estimated RunTime:1/1	Priority:3	Status:2
+Process ID:7	Arrival Time:7	Used Time/Estimated RunTime:5/5	Priority:5	Status:2
+Process ID:1	Arrival Time:4	Used Time/Estimated RunTime:3/3	Priority:4	Status:2
+Process ID:6	Arrival Time:6	Used Time/Estimated RunTime:2/2	Priority:3	Status:2
+Process ID:5	Arrival Time:4	Used Time/Estimated RunTime:2/2	Priority:2	Status:2
+Process ID:10	Arrival Time:2	Used Time/Estimated RunTime:5/5	Priority:2	Status:2
+Process ID:8	Arrival Time:6	Used Time/Estimated RunTime:2/2	Priority:1	Status:2
+Waiting Queue:
+Process ID:4	Arrival Time:0	Used Time/Estimated RunTime:4/8	Priority:-3	Status:0
+Process ID:9	Arrival Time:6	Used Time/Estimated RunTime:8/10	Priority:-3	Status:0
+Process ID:3	Arrival Time:5	Used Time/Estimated RunTime:6/9	Priority:-3	Status:0
+==================
+Time=38
+------------------Load arrival processed
+------------------Begin Scheduling
+Current running proces: 
+Process ID:4	Arrival Time:0	Used Time/Estimated RunTime:4/8	Priority:-3	Status:0
+Finished Processes:
+Process ID:2	Arrival Time:0	Used Time/Estimated RunTime:1/1	Priority:3	Status:2
+Process ID:7	Arrival Time:7	Used Time/Estimated RunTime:5/5	Priority:5	Status:2
+Process ID:1	Arrival Time:4	Used Time/Estimated RunTime:3/3	Priority:4	Status:2
+Process ID:6	Arrival Time:6	Used Time/Estimated RunTime:2/2	Priority:3	Status:2
+Process ID:5	Arrival Time:4	Used Time/Estimated RunTime:2/2	Priority:2	Status:2
+Process ID:10	Arrival Time:2	Used Time/Estimated RunTime:5/5	Priority:2	Status:2
+Process ID:8	Arrival Time:6	Used Time/Estimated RunTime:2/2	Priority:1	Status:2
+Waiting Queue:
+Process ID:9	Arrival Time:6	Used Time/Estimated RunTime:8/10	Priority:-3	Status:0
+Process ID:3	Arrival Time:5	Used Time/Estimated RunTime:6/9	Priority:-3	Status:0
+Process ID:4	Arrival Time:0	Used Time/Estimated RunTime:5/8	Priority:-4	Status:0
+==================
+Time=39
+------------------Load arrival processed
+------------------Begin Scheduling
+Current running proces: 
+Process ID:9	Arrival Time:6	Used Time/Estimated RunTime:8/10	Priority:-3	Status:0
+Finished Processes:
+Process ID:2	Arrival Time:0	Used Time/Estimated RunTime:1/1	Priority:3	Status:2
+Process ID:7	Arrival Time:7	Used Time/Estimated RunTime:5/5	Priority:5	Status:2
+Process ID:1	Arrival Time:4	Used Time/Estimated RunTime:3/3	Priority:4	Status:2
+Process ID:6	Arrival Time:6	Used Time/Estimated RunTime:2/2	Priority:3	Status:2
+Process ID:5	Arrival Time:4	Used Time/Estimated RunTime:2/2	Priority:2	Status:2
+Process ID:10	Arrival Time:2	Used Time/Estimated RunTime:5/5	Priority:2	Status:2
+Process ID:8	Arrival Time:6	Used Time/Estimated RunTime:2/2	Priority:1	Status:2
+Waiting Queue:
+Process ID:3	Arrival Time:5	Used Time/Estimated RunTime:6/9	Priority:-3	Status:0
+Process ID:4	Arrival Time:0	Used Time/Estimated RunTime:5/8	Priority:-4	Status:0
+Process ID:9	Arrival Time:6	Used Time/Estimated RunTime:9/10	Priority:-4	Status:0
+==================
+Time=40
+------------------Load arrival processed
+------------------Begin Scheduling
+Current running proces: 
+Process ID:3	Arrival Time:5	Used Time/Estimated RunTime:6/9	Priority:-3	Status:0
+Finished Processes:
+Process ID:2	Arrival Time:0	Used Time/Estimated RunTime:1/1	Priority:3	Status:2
+Process ID:7	Arrival Time:7	Used Time/Estimated RunTime:5/5	Priority:5	Status:2
+Process ID:1	Arrival Time:4	Used Time/Estimated RunTime:3/3	Priority:4	Status:2
+Process ID:6	Arrival Time:6	Used Time/Estimated RunTime:2/2	Priority:3	Status:2
+Process ID:5	Arrival Time:4	Used Time/Estimated RunTime:2/2	Priority:2	Status:2
+Process ID:10	Arrival Time:2	Used Time/Estimated RunTime:5/5	Priority:2	Status:2
+Process ID:8	Arrival Time:6	Used Time/Estimated RunTime:2/2	Priority:1	Status:2
+Waiting Queue:
+Process ID:4	Arrival Time:0	Used Time/Estimated RunTime:5/8	Priority:-4	Status:0
+Process ID:9	Arrival Time:6	Used Time/Estimated RunTime:9/10	Priority:-4	Status:0
+Process ID:3	Arrival Time:5	Used Time/Estimated RunTime:7/9	Priority:-4	Status:0
+==================
+Time=41
+------------------Load arrival processed
+------------------Begin Scheduling
+Current running proces: 
+Process ID:4	Arrival Time:0	Used Time/Estimated RunTime:5/8	Priority:-4	Status:0
+Finished Processes:
+Process ID:2	Arrival Time:0	Used Time/Estimated RunTime:1/1	Priority:3	Status:2
+Process ID:7	Arrival Time:7	Used Time/Estimated RunTime:5/5	Priority:5	Status:2
+Process ID:1	Arrival Time:4	Used Time/Estimated RunTime:3/3	Priority:4	Status:2
+Process ID:6	Arrival Time:6	Used Time/Estimated RunTime:2/2	Priority:3	Status:2
+Process ID:5	Arrival Time:4	Used Time/Estimated RunTime:2/2	Priority:2	Status:2
+Process ID:10	Arrival Time:2	Used Time/Estimated RunTime:5/5	Priority:2	Status:2
+Process ID:8	Arrival Time:6	Used Time/Estimated RunTime:2/2	Priority:1	Status:2
+Waiting Queue:
+Process ID:9	Arrival Time:6	Used Time/Estimated RunTime:9/10	Priority:-4	Status:0
+Process ID:3	Arrival Time:5	Used Time/Estimated RunTime:7/9	Priority:-4	Status:0
+Process ID:4	Arrival Time:0	Used Time/Estimated RunTime:6/8	Priority:-5	Status:0
+==================
+Time=42
+------------------Load arrival processed
+------------------Begin Scheduling
+Current running proces: 
+Process ID:9	Arrival Time:6	Used Time/Estimated RunTime:9/10	Priority:-4	Status:0
+Finished Processes:
+Process ID:2	Arrival Time:0	Used Time/Estimated RunTime:1/1	Priority:3	Status:2
+Process ID:7	Arrival Time:7	Used Time/Estimated RunTime:5/5	Priority:5	Status:2
+Process ID:1	Arrival Time:4	Used Time/Estimated RunTime:3/3	Priority:4	Status:2
+Process ID:6	Arrival Time:6	Used Time/Estimated RunTime:2/2	Priority:3	Status:2
+Process ID:5	Arrival Time:4	Used Time/Estimated RunTime:2/2	Priority:2	Status:2
+Process ID:10	Arrival Time:2	Used Time/Estimated RunTime:5/5	Priority:2	Status:2
+Process ID:8	Arrival Time:6	Used Time/Estimated RunTime:2/2	Priority:1	Status:2
+Process ID:9	Arrival Time:6	Used Time/Estimated RunTime:10/10	Priority:-4	Status:2
+Waiting Queue:
+Process ID:3	Arrival Time:5	Used Time/Estimated RunTime:7/9	Priority:-4	Status:0
+Process ID:4	Arrival Time:0	Used Time/Estimated RunTime:6/8	Priority:-5	Status:0
+==================
+Time=43
+------------------Load arrival processed
+------------------Begin Scheduling
+Current running proces: 
+Process ID:3	Arrival Time:5	Used Time/Estimated RunTime:7/9	Priority:-4	Status:0
+Finished Processes:
+Process ID:2	Arrival Time:0	Used Time/Estimated RunTime:1/1	Priority:3	Status:2
+Process ID:7	Arrival Time:7	Used Time/Estimated RunTime:5/5	Priority:5	Status:2
+Process ID:1	Arrival Time:4	Used Time/Estimated RunTime:3/3	Priority:4	Status:2
+Process ID:6	Arrival Time:6	Used Time/Estimated RunTime:2/2	Priority:3	Status:2
+Process ID:5	Arrival Time:4	Used Time/Estimated RunTime:2/2	Priority:2	Status:2
+Process ID:10	Arrival Time:2	Used Time/Estimated RunTime:5/5	Priority:2	Status:2
+Process ID:8	Arrival Time:6	Used Time/Estimated RunTime:2/2	Priority:1	Status:2
+Process ID:9	Arrival Time:6	Used Time/Estimated RunTime:10/10	Priority:-4	Status:2
+Waiting Queue:
+Process ID:4	Arrival Time:0	Used Time/Estimated RunTime:6/8	Priority:-5	Status:0
+Process ID:3	Arrival Time:5	Used Time/Estimated RunTime:8/9	Priority:-5	Status:0
+==================
+Time=44
+------------------Load arrival processed
+------------------Begin Scheduling
+Current running proces: 
+Process ID:4	Arrival Time:0	Used Time/Estimated RunTime:6/8	Priority:-5	Status:0
+Finished Processes:
+Process ID:2	Arrival Time:0	Used Time/Estimated RunTime:1/1	Priority:3	Status:2
+Process ID:7	Arrival Time:7	Used Time/Estimated RunTime:5/5	Priority:5	Status:2
+Process ID:1	Arrival Time:4	Used Time/Estimated RunTime:3/3	Priority:4	Status:2
+Process ID:6	Arrival Time:6	Used Time/Estimated RunTime:2/2	Priority:3	Status:2
+Process ID:5	Arrival Time:4	Used Time/Estimated RunTime:2/2	Priority:2	Status:2
+Process ID:10	Arrival Time:2	Used Time/Estimated RunTime:5/5	Priority:2	Status:2
+Process ID:8	Arrival Time:6	Used Time/Estimated RunTime:2/2	Priority:1	Status:2
+Process ID:9	Arrival Time:6	Used Time/Estimated RunTime:10/10	Priority:-4	Status:2
+Waiting Queue:
+Process ID:3	Arrival Time:5	Used Time/Estimated RunTime:8/9	Priority:-5	Status:0
+Process ID:4	Arrival Time:0	Used Time/Estimated RunTime:7/8	Priority:-6	Status:0
+==================
+Time=45
+------------------Load arrival processed
+------------------Begin Scheduling
+Current running proces: 
+Process ID:3	Arrival Time:5	Used Time/Estimated RunTime:8/9	Priority:-5	Status:0
+Finished Processes:
+Process ID:2	Arrival Time:0	Used Time/Estimated RunTime:1/1	Priority:3	Status:2
+Process ID:7	Arrival Time:7	Used Time/Estimated RunTime:5/5	Priority:5	Status:2
+Process ID:1	Arrival Time:4	Used Time/Estimated RunTime:3/3	Priority:4	Status:2
+Process ID:6	Arrival Time:6	Used Time/Estimated RunTime:2/2	Priority:3	Status:2
+Process ID:5	Arrival Time:4	Used Time/Estimated RunTime:2/2	Priority:2	Status:2
+Process ID:10	Arrival Time:2	Used Time/Estimated RunTime:5/5	Priority:2	Status:2
+Process ID:8	Arrival Time:6	Used Time/Estimated RunTime:2/2	Priority:1	Status:2
+Process ID:9	Arrival Time:6	Used Time/Estimated RunTime:10/10	Priority:-4	Status:2
+Process ID:3	Arrival Time:5	Used Time/Estimated RunTime:9/9	Priority:-5	Status:2
+Waiting Queue:
+Process ID:4	Arrival Time:0	Used Time/Estimated RunTime:7/8	Priority:-6	Status:0
+==================
+Time=46
+------------------Load arrival processed
+------------------Begin Scheduling
+Current running proces: 
+Process ID:4	Arrival Time:0	Used Time/Estimated RunTime:7/8	Priority:-6	Status:0
+Finished Processes:
+Process ID:2	Arrival Time:0	Used Time/Estimated RunTime:1/1	Priority:3	Status:2
+Process ID:7	Arrival Time:7	Used Time/Estimated RunTime:5/5	Priority:5	Status:2
+Process ID:1	Arrival Time:4	Used Time/Estimated RunTime:3/3	Priority:4	Status:2
+Process ID:6	Arrival Time:6	Used Time/Estimated RunTime:2/2	Priority:3	Status:2
+Process ID:5	Arrival Time:4	Used Time/Estimated RunTime:2/2	Priority:2	Status:2
+Process ID:10	Arrival Time:2	Used Time/Estimated RunTime:5/5	Priority:2	Status:2
+Process ID:8	Arrival Time:6	Used Time/Estimated RunTime:2/2	Priority:1	Status:2
+Process ID:9	Arrival Time:6	Used Time/Estimated RunTime:10/10	Priority:-4	Status:2
+Process ID:3	Arrival Time:5	Used Time/Estimated RunTime:9/9	Priority:-5	Status:2
+Process ID:4	Arrival Time:0	Used Time/Estimated RunTime:8/8	Priority:-6	Status:2
+Waiting Queue:
+All Process Finished
