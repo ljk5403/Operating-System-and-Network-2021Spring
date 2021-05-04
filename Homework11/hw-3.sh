@@ -19,6 +19,7 @@ do
             else
                 echo "$filename does not exist"
             fi
+            echo 'The End'
         ;;
         2)
             read filename
@@ -28,6 +29,7 @@ do
             else
                 touch $filename
             fi
+            echo 'The End'
         ;;
         3)
             read sourceName targetName
@@ -37,6 +39,7 @@ do
             else
                 echo 'Source file does not exist'
             fi
+            echo 'The End'
         ;;
         q)
             echo 'quit'
