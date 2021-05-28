@@ -1,0 +1,23 @@
+struct sockaddr_in {
+ unsigned short  sin_family;  /*取AF_INET*/
+ unsigned short  sin_port;   /*端口号，网络字节顺序*/
+ struct in_addr sin_addr;    /*IP地址，网络字节顺序*/
+ unsigned char sin_zero[8];  /*使用bzero()或memset()全部置0，*/
+  };
+struct in_addr { unsigned long  s_addr;};
+
+
+struct sockaddr_in server;
+（1） memset(&server,0,sizeof(server));     //将地址结构adr_inet清0
+      bzero(&server,sizeof(server));
+（2）server.sin_family=AF_INET;            //确定域,从而确定地址族
+（3）server.sin_port=htons(0);             //自动选择合适的端口号
+     server.sin_port=htons(PORT);
+     server.sin_port=htons(8080);
+（4）server.sin_addr.s_addr=htonl(INADDR_ANY);  //自动填写所运行机器的IP地址
+     server.sin_addr.s_addr=inet_addr(“202.113.29.19”);
+     inet_aton(“162.105.32.1”,&server.sin_addr);
+
+     struct hostent *he;
+     he=gethostbyname(“www.nankai.edu.cn”);
+     server.sin_addr=*((struct in_addr *)he->h_addr);
