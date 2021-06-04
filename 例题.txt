@@ -1,0 +1,456 @@
+例1：地址和端口转换函数addr1.cpp，要求带参数的主函数，提供IP地址和端口号，建议把常用的头文件写入my.h中，再#include  “my.h”
+如：my.h
+#include <sys/types.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <arpa/inet.h>
+#include <string.h>
+#include <unistd.h>
+#include <iostream>
+using namespace std;
+#include <stdlib.h>
+#include <netdb.h>
+
+wenyuan@ubuntu:~/mysock$ more addr1.cpp
+#include <sys/socket.h>
+#include <sys/types.h>
+#include <iostream>
+using namespace std;
+#include <stdlib.h>
+#include <string.h>
+#include <arpa/inet.h>
+int main(int argc,char *argv[])
+{struct sockaddr_in saddr;
+unsigned short port;
+port=atoi(argv[2]);
+
+if (argc<2)
+{cout<<"argv[1]:IP,argv[2]:PORT\n";
+exit(0);
+}
+memset(&saddr,0,sizeof(struct sockaddr_in));
+saddr.sin_family=AF_INET;
+saddr.sin_port=htons(port);
+saddr.sin_addr.s_addr=inet_addr(argv[1]);
+//inet_aton(argv[1],&saddr.sin_addr);
+cout<<saddr.sin_addr.s_addr<<"  "<<saddr.sin_port<<endl;
+cout<<inet_ntoa(saddr.sin_addr)<<"  "<<ntohs(saddr.sin_port)<<endl;
+}
+wenyuan@ubuntu:~/mysock$ g++ addr1.cpp -o addr1
+wenyuan@ubuntu:~/mysock$ ./addr1 10.9.22.12 1234
+202770698  53764
+10.9.22.12  1234
+wenyuan@ubuntu:~/mysock$ ./addr1 
+argv[1]:IP,argv[2]:PORT
+
+注：ifconfig可以查看本机IP地址信息
+wenyuan@ubuntu:~/mysock$ ifconfig
+eth0      Link encap:以太网  硬件地址 00:0c:29:b2:11:29  
+          inet 地址:192.168.70.128  广播:192.168.70.255  掩码:255.255.255.0
+          inet6 地址: fe80::20c:29ff:feb2:1129/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  跃点数:1
+          接收数据包:3618 错误:0 丢弃:0 过载:0 帧数:0
+          发送数据包:2096 错误:0 丢弃:0 过载:0 载波:0
+          碰撞:0 发送队列长度:1000 
+          接收字节:3466761 (3.4 MB)  发送字节:184592 (184.5 KB)
+
+lo        Link encap:本地环回  
+          inet 地址:127.0.0.1  掩码:255.0.0.0
+          inet6 地址: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:65536  跃点数:1
+          接收数据包:356 错误:0 丢弃:0 过载:0 帧数:0
+          发送数据包:356 错误:0 丢弃:0 过载:0 载波:0
+          碰撞:0 发送队列长度:0 
+          接收字节:39320 (39.3 KB)  发送字节:39320 (39.3 KB)
+例2：地址和端口转换函数addr2.cpp，要求带参数的主函数，提供域名（或IP地址）和端口号。
+注：主页访问淘宝，看到网址www.taobao.com，ping www.taobao.com，可以看到对应IP地址。
+wenyuan@ubuntu:~/mysock$ ping www.taobao.com
+PING www.taobao.com.danuoyi.tbcache.com (42.236.35.236) 56(84) bytes of data.
+64 bytes from hn.kd.ny.adsl (42.236.35.236): icmp_seq=1 ttl=128 time=19.8 ms
+64 bytes from hn.kd.ny.adsl (42.236.35.236): icmp_seq=2 ttl=128 time=22.1 ms
+^C
+--- www.taobao.com.danuoyi.tbcache.com ping statistics ---
+2 packets transmitted, 2 received, 0% packet loss, time 1002ms
+rtt min/avg/max/mdev = 19.818/20.992/22.167/1.183 ms
+得知IP地址为：42.236.35.236
+wenyuan@ubuntu:~/mysock$ more addr2.cpp
+#include <sys/socket.h>
+#include <sys/types.h>
+#include <iostream>
+using namespace std;
+#include <stdlib.h>  /*atoi*/
+#include <string.h> /*memset  bzero*/
+#include <netdb.h> /*gethostbyname*/
+#include <arpa/inet.h>
+int main(int argc,char *argv[])
+{struct sockaddr_in saddr;
+ struct hostent *he;
+unsigned short port;
+port=atoi(argv[2]);
+he=gethostbyname(argv[1]);
+
+//memset(&saddr,0,sizeof(struct sockaddr_in));
+bzero(&saddr,sizeof(struct sockaddr_in));
+saddr.sin_family=AF_INET;
+saddr.sin_port=htons(port);
+saddr.sin_addr=*((struct in_addr *)he->h_addr);
+
+cout<<saddr.sin_addr.s_addr<<"  "<<saddr.sin_port<<endl;
+cout<<inet_ntoa(saddr.sin_addr)<<"  "<<ntohs(saddr.sin_port)<<endl;
+}
+wenyuan@ubuntu:~/mysock$ ./addr2 www.taobao.com 4567
+3106139178  55057
+42.236.35.185  4567
+验证结果正确！
+wenyuan@ubuntu:~/mysock$ ./addr2 42.236.35.185 4567
+3106139178  55057
+42.236.35.185  4567
+例3：TCP通讯：tcpserver.cpp/tcpclient.cpp
+// tcpserver.cpp
+#include  “my.h”
+#define PORT 1234
+#define BACKLOG 1
+
+int main()
+{struct sockaddr_in server,client;
+int listenfd,connectfd;
+int sin_size;
+int opt;
+listenfd=socket(AF_INET,SOCK_STREAM,0);
+if(listenfd<0){
+  cout<<"socket creating error!\n";
+  exit(1);
+  }
+opt=SO_REUSEADDR;
+setsockopt(listenfd,SOL_SOCKET,SO_REUSEADDR,&opt,sizeof(opt));
+
+/*memset(&server,0,sizeof(struct sockaddr_in));*/
+bzero(&server,sizeof(server));
+server.sin_family=AF_INET;
+server.sin_port=htons(PORT);
+server.sin_addr.s_addr=htonl(INADDR_ANY);
+/*server.sin_addr.s_addr=inet_addr("202.113.29.19");*/
+/*inet_aton("202.113.29.19",&server.sin_addr);*/
+
+if(bind(listenfd,(struct sockaddr *)&server,sizeof(struct sockaddr))==-1){
+  cout<<"bind failed\n";
+  exit(2);
+ }
+
+
+if(listen(listenfd,BACKLOG)==-1){
+  cout<<"listen() failed\n";
+  exit(3);
+ }
+
+sin_size=sizeof(struct sockaddr_in);
+if((connectfd=accept(listenfd,(struct sockaddr *)&client,(socklen_t *)&sin_size))==-1){
+  cout<<"accept() failed\n";
+  exit(4);
+ }
+cout<<"you got a connection from  "<<inet_ntoa(client.sin_addr)<<endl;
+send(connectfd,"welcome to my server.\n",22,0);
+close(connectfd);
+close(listenfd);
+}
+//tcpclient.cpp
+#include “my.h”
+#define PORT 1234
+#define MAXDATASIZE 100
+int main(int argc,char *argv[])
+{struct sockaddr_in server;
+int fd,numbytes;
+char buf[MAXDATASIZE];
+struct hostent *he;
+if(argc!=2){
+  cout<<argv[0]<<" <IPaddress>\n";
+  exit(0);
+  }
+
+if((he=gethostbyname(argv[1]))==NULL){
+cout<<"gethostname() error\n";
+exit(1);
+}
+fd=socket(AF_INET,SOCK_STREAM,0);
+if(fd<0){
+  cout<<"socket creating error!\n";
+  exit(1);
+  }
+memset(&server,0,sizeof(struct sockaddr_in));
+server.sin_family=AF_INET;
+server.sin_port=htons(PORT);
+server.sin_addr=*((struct in_addr *)he->h_addr);
+if(connect(fd,(struct sockaddr *)(&server),sizeof(struct sockaddr_in))<0){
+  cout<<"connect failed\n";
+  exit(2);
+ }
+
+if((numbytes=recv(fd,buf,MAXDATASIZE,0))==-1){
+  cout<<"recv()  failed\n";
+  exit(2);
+ }
+buf[numbytes]=0;
+cout<<"server message:  "<<buf<<endl;
+close(fd);
+}
+分别在两个窗口运行：tcpserver和tcpclient 192.168.70.128，其中IP地址是ifconfig获得的
+wenyuan@ubuntu:~/mysock$ ./tcpserver
+you got a connection from  192.168.70.128
+wenyuan@ubuntu:~/mysock$ ./tcpclient 192.168.70.128
+server message:  welcome to my server.
+
+还可以：其中127.0.0.1为回路地址
+wenyuan@ubuntu:~/mysock$ ./tcpserver
+you got a connection from  127.0.0.1
+wenyuan@ubuntu:~/mysock$ ./tcpclient 127.0.0.1
+server message:  welcome to my server.
+
+例4：TCP通讯传输不同类型数据dateserver.cpp/dataclient.cpp
+int send(int sockfd, void *msg,int len,int flags);
+int recv( int sockfd, void *buf, int len, int flags);
+ int read(int fd,char *buf,int count); 
+ int write(int fd,char *buf,int count); 
+//dateserver.cpp
+#include  “my.h”
+#define PORT 2345
+#define BACKLOG 1
+int main()
+{struct sockaddr_in server,client;
+int listenfd,connectfd;
+int sin_size;
+int n,i,j;
+
+char ch;
+char buf[100];
+int a0,a1[4],a2[2][3],*p;
+float x0,x1[4],x2[2][3],*q;
+struct ss
+  {int xx;
+   float yy;
+  }xx1,yy1[2];
+
+listenfd=socket(AF_INET,SOCK_STREAM,0);
+if(listenfd<0){
+  cout<<"socket creating error!\n";
+  exit(1);
+  }
+
+bzero(&server,sizeof(server));
+server.sin_family=AF_INET;
+server.sin_port=htons(PORT);
+server.sin_addr.s_addr=htonl(INADDR_ANY);
+/*server.sin_addr.s_addr=inet_addr("127.0.0.1");*/
+/*inet_aton("127.0.0.1",&server.sin_addr*/
+
+if(bind(listenfd,(struct sockaddr *)&server,sizeof(struct sockaddr))==-1){
+  cout<<"bind failed\n";
+  exit(2);
+ }
+
+if(listen(listenfd,BACKLOG)==-1){
+  cout<<"listen() failed\n";
+  exit(3);
+ }
+
+sin_size=sizeof(struct sockaddr_in);
+if((connectfd=accept(listenfd,(struct sockaddr *)&client,(socklen_t *)&sin_size))==-1){
+  cout<<"accept() failed\n";
+  exit(4);
+ }
+
+n=recv(connectfd,&ch,100,0);
+//n=read(connectfd,&ch,100);
+cout<<"ch="<<ch<<endl;
+
+n=recv(connectfd,buf,100,0);
+buf[n]=0;
+cout<<"buf="<<buf<<endl;
+
+n=recv(connectfd,(char *)&a0,100,0);
+//n=read(connectfd,(char *)&a0,100);
+cout<<"a0="<<a0<<endl;
+
+n=recv(connectfd,(char *)&a1[0],100,0);
+cout<<"array a1:\n";
+for(i=0;i<4;i++)
+  cout<<a1[i]<<"  ";
+cout<<endl;
+
+n=recv(connectfd,(char *)&a2[0][0],100,0);
+cout<<"array a2:\n";
+for(i=0;i<2;i++)
+{
+ for(j=0;j<3;j++)
+  cout<<a2[i][j]<<"   ";
+ cout<<endl;
+}
+
+n=recv(connectfd,(char *)&x0,100,0);
+cout<<"x0="<<x0<<endl;
+
+n=recv(connectfd,(char *)&x1[0],100,0);
+cout<<"array x1:\n";
+for(i=0;i<4;i++)
+  cout<<x1[i]<<"  ";
+cout<<endl;
+
+n=recv(connectfd,(char *)&x2[0][0],100,0);
+cout<<"array x2:\n";
+for(i=0;i<2;i++)
+ {
+  for(j=0;j<3;j++)
+    cout<<x2[i][j]<<"  ";
+  cout<<endl;
+}
+
+n=recv(connectfd,(char *)&xx1,100,0);
+cout<<"xx1="<<xx1.xx<<"  "<<xx1.yy<<endl;
+
+n=recv(connectfd,(char *)&yy1[0],100,0);
+cout<<"struct yy1:\n";
+for(i=0;i<2;i++)
+  cout<<yy1[i].xx<<"  "<<yy1[i].yy<<endl;
+
+ close(connectfd);
+ close(listenfd);
+}
+//dataclient.cpp
+#include  “my.h”
+#define PORT 2345
+#define MAXDATASIZE 100
+int main(int argc,char *argv[])
+{struct sockaddr_in server;
+int fd,n;
+
+int i,j;
+char ch;
+char buf[100];
+int a0,a1[4],a2[2][3],*p;
+float x0,x1[4],x2[2][3],*q;
+struct ss
+{int xx;
+ float yy;
+}xx1,yy1[2];
+
+if(argc!=2){
+cout<<argv[0]<<" IPaddress\n";  
+exit(0);
+  }
+
+fd=socket(AF_INET,SOCK_STREAM,0);
+if(fd<0){
+cout<<"socket create error!\n"; 
+ exit(1);
+  }
+
+memset(&server,0,sizeof(struct sockaddr_in));
+server.sin_family=AF_INET;
+server.sin_port=htons(PORT);
+inet_aton(argv[1],&server.sin_addr);
+
+if(connect(fd,(struct sockaddr *)(&server),sizeof(struct sockaddr_in))<0){
+  cout<<"connect failed!\n";
+  exit(2);
+ }
+
+cout<<"begin input\n";
+
+cout<<"input a char:\n";
+cin>>ch;
+send(fd,&ch,sizeof(ch),0);
+//write(fd,&ch,sizeof(ch));
+
+cout<<"input a string\n";
+cin>>buf;
+send(fd,buf,MAXDATASIZE,0);
+
+cout<<"input a integer:\n";
+cin>>a0;
+send(fd,&a0,sizeof(int),0);
+//write(fd,&a0,sizeof(int));
+
+cout<<"input integer array a1[4]:\n";
+for(i=0;i<4;i++)
+ cin>>a1[i];
+send(fd,&a1[0],sizeof(int)*4,0);
+
+cout<<"input integer array a2[2][3]:\n";
+for(i=0;i<2;i++)
+  for(j=0;j<3;j++)
+ cin>>a2[i][j];
+send(fd,&a2[0][0],sizeof(int)*2*3,0);
+
+cout<<"input a float:\n";
+cin>>x0;
+send(fd,&x0,sizeof(float),0);
+
+cout<<"input float array y1[4]:\n";
+for(i=0;i<4;i++)
+ cin>>x1[i];
+send(fd,&x1[0],sizeof(float)*4,0);
+
+cout<<"input float array y2[2][3]:\n";
+for(i=0;i<2;i++)
+  for(j=0;j<3;j++)
+  cin>>x2[i][j];
+send(fd,&x2[0][0],sizeof(float)*2*3,0);
+
+cout<<"input struct (int float):\n";
+cin>>xx1.xx>>xx1.yy;
+send(fd,&xx1,sizeof(ss),0);
+
+cout<<"input struct array yy1[2] (int float):\n";
+for(i=0;i<2;i++)
+  cin>>yy1[i].xx>>yy1[i].yy;
+send(fd,&yy1[0],sizeof(ss)*2,0);
+
+close(fd);
+}
+运行程序：
+wenyuan@ubuntu:~/mysock$ ./dataserver
+ch=a
+buf=abc
+a0=5
+array a1:
+1  2  3  4  
+array a2:
+1   2   3   
+4   5   6   
+x0=3.14
+array x1:
+-1.5  3.9  0  12.5  
+array x2:
+1.1  -2.2  3.3  
+-4.4  5.5  6.6  
+xx1=1  1.2
+struct yy1:
+1  0.5
+2  -3.8
+wenyuan@ubuntu:~/mysock$ ./dataclient 127.0.0.1
+begin input
+input a char:
+a
+input a string
+abc
+input a integer:
+5
+input integer array a1[4]:
+1 2 3 4
+input integer array a2[2][3]:
+1 2 3      
+4 5 6
+input a float:
+3.14
+input float array y1[4]:
+-1.5 3.9 0 12.5
+input float array y2[2][3]:
+1.1 -2.2 3.3 -4.4 5.5 6.6    
+input struct (int float):
+1 1.2
+input struct array yy1[2] (int float):
+1 0.5
+2 -3.8
+例5：
+（1）尝试用子函数调用，可以采用动态地址分配，在服务器端实现某种算法，并将计算结果发送给客户端。funserver.cpp/funclient.cpp
+（2）可以采用菜单操作，为客户端循环提供不同的服务。menuserver.cpp/menuclient.cpp
+
