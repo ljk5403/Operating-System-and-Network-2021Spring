@@ -112,7 +112,8 @@ wenyuan@ubuntu:~/mysock$ ./addr2 42.236.35.185 4567
 #define BACKLOG 1
 
 int main()
-{struct sockaddr_in server,client;
+{
+struct sockaddr_in server,client;
 int listenfd,connectfd;
 int sin_size;
 int opt;
@@ -155,8 +156,8 @@ close(listenfd);
 }
 //tcpclient.cpp
 #include “my.h”
-#define PORT 1234
-#define MAXDATASIZE 100
+**#define PORT 1234
+**#define MAXDATASIZE 100
 int main(int argc,char *argv[])
 {struct sockaddr_in server;
 int fd,numbytes;
