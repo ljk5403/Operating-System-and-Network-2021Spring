@@ -1,5 +1,7 @@
 # 操作系统与网络 2021春季学期
 
+已结课。
+
 [总集](操作系统与网络-总集.md)
 
 本仓库存储南开大学2021春季学期的操作系统与网络课程笔记等资料。
@@ -10,9 +12,9 @@
 
 也欢迎大家提供收集整理的笔记等资料。
 
-## 目录：
-
-1. [2021年2月26日第一次课](https://github.com/ljk5403/Operating-System-and-Network-2021Spring/blob/master/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E4%B8%8E%E7%BD%91%E7%BB%9C%20L1.md)
-
 ## 拓展作业
 1. `Lab1`进程调度 by [Alexhaoge](https://github.com/Alexhaoge)
+
+## Tips
+
+由于是闭卷笔试，注意记忆socket编程中的变量！
